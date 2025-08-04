@@ -3,4 +3,7 @@
     <string name="inspirational_quote">Inspirational Quote</string>
     <string name="the_inspirational_quote">The inspirational quote</string>
     <string name="get_quote">Get quote</string>
+    <string name="author">Author:</string>
+    <string name="name">Name</string>
+    <string name="get_details">+ details</string>
 </resources>
