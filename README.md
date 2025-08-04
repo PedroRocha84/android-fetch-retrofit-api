@@ -47,6 +47,9 @@ app/
 
 ## 📸 Screenshots
 
+<img width="150" height="320" alt="image" src="https://github.com/user-attachments/assets/b0ac38ed-8949-4d4f-8272-419af4fcdd69" />
+<img width="150" height="320" alt="image" src="https://github.com/user-attachments/assets/89ce4a63-7785-4cc6-861e-cb158b9c6dce" />
+
 
 
 ## 🧠 Learning Goals
