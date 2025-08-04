@@ -1,4 +1,4 @@
-package pt.pedrorocha.android.androidretrofitapi;
+package pt.pedrorocha.android.androidretrofitapi.view;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import pt.pedrorocha.android.androidretrofitapi.network.JsonService;
+import pt.pedrorocha.android.androidretrofitapi.R;
+import pt.pedrorocha.android.androidretrofitapi.model.Quote;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -52,11 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void retrofitFetch() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(JsonPlaceHolderService.API_ENDPOINT)
+                .baseUrl(JsonService.API_ENDPOINT)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        JsonPlaceHolderService api = retrofit.create(JsonPlaceHolderService.class);
+        JsonService api = retrofit.create(JsonService.class);
         api.getQuote().thenAccept(post -> {
             runOnUiThread(() -> {
                 Log.d("thenAccept", "Runing on UI Thread");

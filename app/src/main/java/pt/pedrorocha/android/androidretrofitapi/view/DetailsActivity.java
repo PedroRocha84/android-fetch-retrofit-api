@@ -1,14 +1,13 @@
-package pt.pedrorocha.android.androidretrofitapi;
+package pt.pedrorocha.android.androidretrofitapi.view;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Text;
+import pt.pedrorocha.android.androidretrofitapi.R;
 
 public class DetailsActivity extends AppCompatActivity {
 

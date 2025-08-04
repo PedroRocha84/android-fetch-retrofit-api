@@ -1,4 +1,4 @@
-package pt.pedrorocha.android.androidretrofitapi;
+package pt.pedrorocha.android.androidretrofitapi.model;
 
 public class Response {
     private Quote quote;
