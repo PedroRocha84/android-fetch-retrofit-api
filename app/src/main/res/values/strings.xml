@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">Android Retrofit API</string>
-    <string name="inspirational_quote">Inspirational Quote</string>
-    <string name="the_inspirational_quote">The inspirational quote</string>
+    <string name="quote_title">Inspirational Quote</string>
+    <string name="quote_content">The inspirational quote</string>
     <string name="get_quote">Get quote</string>
     <string name="author">Author:</string>
+    <string name="author_slug">Author Slug</string>
     <string name="name">Name</string>
     <string name="get_details">+ details</string>
+    <string name="author_name">Author name</string>
+    <string name="author_biography">Author Biography</string>
+    <string name="https">https://....</string>
+    <string name="Back">Back</string>
+    <string name="author_description">Author Description</string>
+
 </resources>

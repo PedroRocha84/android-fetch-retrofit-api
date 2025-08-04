@@ -1,19 +1,79 @@
 package pt.pedrorocha.android.androidretrofitapi;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
+    private EditText text_multi;
+    private Button btnGetQuote;
+    private Button btnDetails;
+    private TextView text_author;
+
+    private Quote quote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        btnGetQuote = findViewById(R.id.button_get);
+        btnDetails = findViewById(R.id.button_details);
+        text_multi = findViewById(R.id.textmulti_quote);
+        text_author = findViewById(R.id.text_author);
+
+        btnGetQuote.setOnClickListener(v -> {
+            btnDetails.setEnabled(false);
+            retrofitFetch();
+        });
+
+        btnDetails.setOnClickListener(v ->{
+            Intent intent = new Intent(this, DetailsActivity.class);
+            SharedPreferences prefs = getSharedPreferences("quote", MODE_PRIVATE);
+                prefs.edit().putString("author-name", quote.getAuthor().getName()).apply();
+                prefs.edit().putString("author-slug", quote.getAuthor().getSlug()).apply();
+                prefs.edit().putString("author-description", quote.getAuthor().getDescription()).apply();
+                prefs.edit().putString("author-bio", quote.getAuthor().getBio()).apply();
+                prefs.edit().putString("author-link", quote.getAuthor().getLink()).apply();
+
+            startActivity(intent);
+        });
+    }
+
+    private void retrofitFetch() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(JsonPlaceHolderService.API_ENDPOINT)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        JsonPlaceHolderService api = retrofit.create(JsonPlaceHolderService.class);
+        api.getQuote().thenAccept(post -> {
+            runOnUiThread(() -> {
+                Log.d("thenAccept", "Runing on UI Thread");
+                btnDetails.setEnabled(true);
+                quote = post.getQuote();
+                text_author.setText(post.getQuote().getAuthor().getName());
+                text_multi.setText(post.getQuote().getContent());
+            });
+
+        }).exceptionally(ex -> {
+            runOnUiThread(() -> {
+                if (btnDetails.isEnabled()) {
+                    btnDetails.setEnabled(false);
+                };
+                Log.e("ERROR ", ex.getMessage());
+            });
+            return null;
+        });
     }
 }

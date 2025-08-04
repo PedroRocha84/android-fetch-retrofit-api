@@ -6,9 +6,9 @@ import retrofit2.http.GET;
 
 public interface JsonPlaceHolderService {
     String TAG = "FETCH";
-    String API_ENDPOINT = "http://api.quotable.io";
-    String QUOTES_PATH = "/random";
+    String API_ENDPOINT = "https://api.quotable.kurokeita.dev/api/quotes/";
+    String QUOTES_PATH = "random";
 
     @GET(QUOTES_PATH)
-    CompletableFuture<Quotes> getQuote();
+    CompletableFuture<Response> getQuote();
 }
