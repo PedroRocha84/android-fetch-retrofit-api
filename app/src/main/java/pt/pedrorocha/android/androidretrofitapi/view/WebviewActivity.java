@@ -38,7 +38,7 @@ public class WebviewActivity extends AppCompatActivity {
 
         WebView webView = findViewById(R.id.webView);
         webView.setWebViewClient(new MyWebClient());
-        webView.loadUrl("https://www.kkkl.pt");
+        webView.loadUrl(prefs.toString());
 
         Button btn = findViewById(R.id.btn_back);
         btn.setOnClickListener(v->
