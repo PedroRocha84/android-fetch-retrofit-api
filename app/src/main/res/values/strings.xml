@@ -12,5 +12,6 @@
     <string name="https">https://....</string>
     <string name="Back">Back</string>
     <string name="author_description">Author Description</string>
+    <string name="visit">Open Url</string>
 
 </resources>
