@@ -83,11 +83,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        resetUI(); // your custom method to clear fields, reset views, etc.
+        resetUI();
     }
 
     private void resetUI() {
-
         text_author.setText(" ");
         text_multi.setText(" ");
         btnDetails.setEnabled(false);

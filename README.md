@@ -7,6 +7,7 @@ This Android app fetches a random quote from an external API using the **Retrofi
 - 🔁 Fetch a random quote from the https://api.quotable.kurokeita.dev/ public API
 - 📱 Display the quote and author on the main activity;
 - 🔍 Navigate to a **details screen**, another activity, with additional quote information that i chose without any logic behind. Only for testing data and navigation through both activities
+- 🔗 **NEW FEATURE** a new activity that loads the url parsed from the API.
 
 ## 📌 Backlog
 
@@ -17,6 +18,7 @@ This Android app fetches a random quote from an external API using the **Retrofi
 - **Android Studio**
 - **Java**
 - **XML Layouts**
+- **Retrofit Library**
 
 ## 📁 Project Structure
 
@@ -35,6 +37,7 @@ app/
 │ │ │ ├── view/
 │ │ │ │ └── MainActivity.java
 │ │ │ │ └── DetailsActivity.java
+│ │ │ │ └── WebviewActivity.java
 │ │ │ ├── network/
 │ │ │ │ └── JsonInterface.java
 │ │ ├── res/
@@ -57,6 +60,9 @@ app/
 - Configured **Retrofit client** with a base URL and `GsonConverterFactory` to parse JSON responses automatically.
 - **Performed asynchronous network calls** to retrieve data in the background, ensuring a responsive UI.
 - Parsed complex nested **JSON structures** into strongly typed **Java model classes** (`Quote`, `Author`, `Tag`).
+- Learned and apply how to use a simple Webview widget to load the url parsed from the API.
+- Handle permissions on AndroidManifest.xml to allow access to the internet.
+
 ## 🔧 How to Run
 
 
