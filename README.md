@@ -2,12 +2,18 @@
 # 🧮 Random Quote
 
 This Android app fetches a random quote from an external API using the **Retrofit** library. Each time the **"Get Quote"** button is pressed, a new quote is retrieved from the web. The project was created to explore **networking concepts** and learn how to consume **public REST APIs** in Android.
+
+## 📝 Releases
+- v1.1.0 Release: Webview with loading error handling
+- v1.0.0 Release: Open author URL with a WebView Widget
+
 ## 🚀 Features
 
 - 🔁 Fetch a random quote from the https://api.quotable.kurokeita.dev/ public API
 - 📱 Display the quote and author on the main activity;
 - 🔍 Navigate to a **details screen**, another activity, with additional quote information that i chose without any logic behind. Only for testing data and navigation through both activities
-- 🔗 **NEW FEATURE** a new activity that loads the url parsed from the API.
+- 🔗 **NEW FEATURE** a new activity that loads the url parsed from the API. - Release v1.0.0
+- 🔗 **NEW FEATURE** webviewclient is able to handle and load a index.html file if an error occur with the url (404 ... )  - Release v1.1.0
 
 ## 📌 Backlog
 
