@@ -11,6 +11,7 @@ This Android app fetches a random quote from an external API using the **Retrofi
 
 ## 📌 Backlog
 
+- Use native C function to convert the quote text to uppercase, and display the transformed result below the original quote.
 - Validate if the device have connectivity to internet prior any fetching data
 
 ## 🛠️ Built With
