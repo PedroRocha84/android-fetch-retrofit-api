@@ -54,6 +54,8 @@ app/
 <img width="180" height="375" alt="image" src="https://github.com/user-attachments/assets/ce26c847-e2f4-4cdd-b0f8-3938acd2024b" />
 <img width="180" height="375"  alt="image" src="https://github.com/user-attachments/assets/50910d08-7bf6-44c4-9130-1ded32a3fe58" />
 <img width="180" height="375"  alt="image" src="https://github.com/user-attachments/assets/10ccfd1a-f0df-4934-a957-41e31e375ec2" />
+<img width="180" height="375" alt="image" src="https://github.com/user-attachments/assets/82a57577-59a8-486b-975e-5f6dbbc3564d" />
+
 
 
 ## 🧠 Learning Goals
